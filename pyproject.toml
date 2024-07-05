@@ -1,0 +1,35 @@
+[project]
+name = "funnylog2"
+description = ""
+authors = [
+    { name = "mikigo", email = "huangmingqiang@uniontech.com" },
+]
+dependencies = [
+]
+
+dynamic = [
+  "version",
+]
+
+requires-python = ">=3.7"
+readme = "README.md"
+license = { text = "GPL2.0" }
+
+[project.optional-dependencies]
+allure = [
+    "allure-pytest",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch]
+version = { path = "funnylog2/__version__.py" }
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "/funnylog2",
+]
+
