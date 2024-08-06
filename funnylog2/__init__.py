@@ -177,8 +177,8 @@ def log(cls):
         if name.startswith("_"):
             continue
         if (
-                class_name.startswith(config.CLASS_NAME_STARTSWITH)
-                or class_name.endswith(config.CLASS_NAME_ENDSWITH)
+                class_name.startswith(tuple(config.CLASS_NAME_STARTSWITH))
+                or class_name.endswith(tuple(config.CLASS_NAME_ENDSWITH))
                 or any(
             (class_name.find(text) > -1 for text in config.CLASS_NAME_CONTAIN)
         )
